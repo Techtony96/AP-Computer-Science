@@ -1,5 +1,7 @@
 package me.Techtony96;
+
 public class FamilyStats {
+	
 	public static void main(String[] args) {
 		/*
 		 * This program will find the variance between the ages of this family.
@@ -7,8 +9,7 @@ public class FamilyStats {
 
 
 
-		//math equations obtained from: 
-		//http://mathworld.wolfram.com/SampleVariance.html
+		//math equations obtained from: www.mathworld.wolfram.com/SampleVariance.html
 
 		
 		// define some ages
@@ -18,7 +19,6 @@ public class FamilyStats {
 		int dogsAge= 6;
 
 		// get the mean
-
 		double ageSum = (momsAge + dadsAge + myAge + sistersAge + dogsAge);
 		double average = ageSum / 5;
 
@@ -31,13 +31,15 @@ public class FamilyStats {
 		variance += (dogsAge - average)*(dogsAge - average);
 		variance = variance / 4;
 
-		// get the std. dev
+		// get the standard deviation
 		double standardDev= Math.sqrt(variance);
+		
 		// output the results
 		System.out.println("The sample age mean is: " + average);
 		System.out.println("The sample age variance is: " + variance);
 		System.out.println("The sample age standard deviation is: " + standardDev);
 		
+		//Output my name
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
 
@@ -69,8 +71,7 @@ The sample age standard deviation is: 16.284962388657824
 2. the first System.out.println needs " " around the text
 3. // is the correct way to comment something out
 4. dadsAge needs to be on a new line and have int in front of it.
-5. // is the correct way to comment something out (Again)
-6. DogsAge should be dogsAge
-7. Semicolon should end every line.
-8. (I guess actually 7 because i corrected the // twice) Put a * for multiplication between variables.
+5. DogsAge should be dogsAge
+6. Semicolon should end every line.
+7. Put a * for multiplication between variables.
  */
