@@ -2,6 +2,8 @@ package me.Techtony96;
 
 import java.util.Scanner;
 
+import Utilities.BlockLetters;
+
 public class Change {
 	/*
 	 * This program will ask for the total of the bill and the amount of cash
