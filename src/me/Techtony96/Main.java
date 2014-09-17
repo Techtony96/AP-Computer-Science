@@ -1,5 +1,7 @@
 package me.Techtony96;
 
+import java.util.Scanner;
+
 import Utilities.BlockLetters;
 
 public class Main {
@@ -16,6 +18,9 @@ public class Main {
 	
 
 	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		
 		
 		BlockLetters.TONY_PAPPAS.outputBlockName();		
 		
