@@ -18,16 +18,22 @@ public class NumberManipulation_76A {
 	
 
 	public static void main(String[] args) {
+		//Define new scanner for user input
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter a number you dislike: ");
+		//Define a variable for a number the user doesn't like
 		double number = in.nextDouble();
+		//Output the number
 		System.out.println(number);
+		//Show and multiply the number by 9
 		System.out.println("X9");
 		number *=9;
 		System.out.println("-------------");
+		//Show and multiply the number by 12345679
 		System.out.println(number);
 		System.out.println("X 12345679");
 		number *= 12345679;
+		//Output the number correctly (no scientific notation)
 		System.out.printf("%.0f     Surprise\n", number);
 		System.out.println("X 1000");
 		number *= 1000;
