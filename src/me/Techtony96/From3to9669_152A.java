@@ -16,12 +16,17 @@ public class From3to9669_152A {
 	
 
 	public static void main(String[] args) {
+		//Define variable to keep track of the sum.
 		int number = 0;
+		//Define loop to count from 3 to 9669
 		for (int i = 3; i<=9669; i++){
+			//Check if the current number (i) is divisible by 3
 			if (i % 3 == 0){
+				//If it is divisible, add it to number
 				number += i;
 			}
 		}
+		//Output the result
 		System.out.println("The sum of the multiples of 3 from 3 to 9669 is " + number);
 		
 		

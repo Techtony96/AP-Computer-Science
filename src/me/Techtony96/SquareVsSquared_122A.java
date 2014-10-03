@@ -19,10 +19,14 @@ public class SquareVsSquared_122A {
 	
 
 	public static void main(String[] args) {
+		//Define new scanner for user input
 		Scanner in = new Scanner(System.in);
 		System.out.println("Number  Square  Squareroot");
+		//Loop from 1 to 40
 		for (int i = 1; i <= 40; i++){
+			//Help with formatting, if the current number is less than 10, add an extra space.
 			if (i < 10){
+				//Output the current number, squared, and square root
 				System.out.println(i + "       " + Math.pow(i, 2) + "       " + Round.thousandths(Math.pow(i, .5)));
 			} else {
 				System.out.println(i + "      " + Math.pow(i, 2) + "      " + Round.thousandths(Math.pow(i, .5)));

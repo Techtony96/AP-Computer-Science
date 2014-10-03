@@ -18,11 +18,16 @@ public class HourlyPay_122B {
 	
 
 	public static void main(String[] args) {
+		//Define new scanner for user input
 		Scanner in = new Scanner(System.in);
+		//ask user for input
 		System.out.println("Insert Hourly Pay");
+		//define variable to store user input on hourly pay
 		double hourlypay = in.nextDouble();
 		System.out.println("Hours    Pay");
+		//Loop for 1 to 40
 		for (int i = 1; i<=40; i++){
+			//Output hours worked and amount paid
 			System.out.println(" " + i + "    $" + i*hourlypay);
 		}
 		

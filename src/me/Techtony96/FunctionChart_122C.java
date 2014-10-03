@@ -16,12 +16,16 @@ public class FunctionChart_122C {
 	
 
 	public static void main(String[] args) {
+		//Define variables for each column and the number that they started in.
 		int column1 = 2;
 		int column2 = 3;
 		int column3 = 4;
 		int column4 = 4;
+		//Loop through each row
 		for (int i=1; i<=5;i++){
+			//Output the row
 			System.out.println(column1 + "  " + column2 + "  " + column3 + "  " + column4 );
+			//Find the next number in the row.
 			column1 += 2;
 			column2 += 2;
 			column3 += 4;
