@@ -1,5 +1,6 @@
 package me.Techtony96;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 import me.Techtony96.Utilities.BlockLetters;
@@ -15,6 +16,8 @@ public class Main {
 	 * 
 	 * Description: 
 	 */
+	
+	DecimalFormat money = new DecimalFormat("$0.00");
 	
 
 	public static void main(String[] args) {
