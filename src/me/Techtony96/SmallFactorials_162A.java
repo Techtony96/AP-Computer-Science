@@ -2,7 +2,7 @@ package me.Techtony96;
 
 import java.util.Scanner;
 
-import Utilities.BlockLetters;
+import me.Techtony96.Utilities.BlockLetters;
 
 public class SmallFactorials_162A {
 	

@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import Utilities.BlockLetters;
+import me.Techtony96.Utilities.BlockLetters;
 
 public class SumAndAverage_155T {
 

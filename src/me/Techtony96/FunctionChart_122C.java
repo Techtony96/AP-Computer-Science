@@ -1,6 +1,6 @@
 package me.Techtony96;
 
-import Utilities.BlockLetters;
+import me.Techtony96.Utilities.BlockLetters;
 
 public class FunctionChart_122C {
 	

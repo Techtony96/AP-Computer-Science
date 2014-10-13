@@ -1,4 +1,4 @@
-package Utilities;
+package me.Techtony96.Utilities;
 
 import java.util.ArrayList;
 import java.util.List;

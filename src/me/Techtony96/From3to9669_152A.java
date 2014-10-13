@@ -1,6 +1,6 @@
 package me.Techtony96;
 
-import Utilities.BlockLetters;
+import me.Techtony96.Utilities.BlockLetters;
 
 public class From3to9669_152A {
 	

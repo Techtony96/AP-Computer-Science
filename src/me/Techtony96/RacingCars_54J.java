@@ -2,9 +2,9 @@ package me.Techtony96;
 
 import java.util.Scanner;
 
-import Utilities.BlockLetters;
-import Utilities.Circle;
-import Utilities.Round;
+import me.Techtony96.Utilities.BlockLetters;
+import me.Techtony96.Utilities.Circle;
+import me.Techtony96.Utilities.Round;
 
 public class RacingCars_54J {
 	
