@@ -17,11 +17,10 @@ public class Main {
 	 * Description: 
 	 */
 	
-	DecimalFormat money = new DecimalFormat("$0.00");
-	
+	static DecimalFormat money = new DecimalFormat("$0.00");
+	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
 		
 		
 		
