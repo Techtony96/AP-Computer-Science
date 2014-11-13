@@ -21,11 +21,16 @@ public class WeatherForecasting_213D {
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		//Prompt user for input
 		p("Enter Cricket Chirps/Min: ");
+		//assign input to variable
 		double chirps = in.nextDouble();
+		//calculate farenheit and celcius
 		double F = (chirps+40)/4.0;
 		double C = ((F - 32)*5.0)/9.0;
+		//define variable for the condition of the weather
 		String condition;
+		//determine what the condition is
 		if (F < 45){
 			condition = "Bur-rrr";
 		} else if (Order.isBetween(F, 45, 64)){
@@ -38,6 +43,7 @@ public class WeatherForecasting_213D {
 			condition = "Dead Cricket";
 		}
 		
+		//output result
 		l("Fahrenheit = " + Round.tenths(F));
 		l("Centigrade = " + Round.tenths(C));
 		l("Condition = " + condition);
@@ -46,6 +52,7 @@ public class WeatherForecasting_213D {
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
 	
+	//methods to make outputting stuff easier
 	private static void l(String s){
 		System.out.println(s);
 	}
