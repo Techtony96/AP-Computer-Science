@@ -19,11 +19,16 @@ public class QuantityOrdering_213B {
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		//Define variables
 		double cost;
 		int quantity;
+		//create loop to loop program 4 times
 		for (int i = 1; i<=4; i++){
+			//prompt the user for input
 			System.out.print("Enter the Quantity you want to Order: ");
+			//assign input to a variable
 			quantity = in.nextInt();
+			//determine what the cost is inbetween
 			if (isBetween(quantity, 0, 99)){
 				cost = 5.95;
 			} else if (isBetween(quantity, 100, 199)){
@@ -34,6 +39,7 @@ public class QuantityOrdering_213B {
 				cost = 5.15;
 			}
 			
+			//output price and amount due
 			System.out.println("Price = $" + cost);
 			System.out.println("Amount due = $" + cost*quantity);
 		}
@@ -42,6 +48,7 @@ public class QuantityOrdering_213B {
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
 
+	//method to determine if a value x in inbetween lower and upper, inclusive
 	public static boolean isBetween(int x, int lower, int upper) {
 		return lower <= x && x <= upper;
 	}
