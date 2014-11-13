@@ -56,12 +56,23 @@ public class CountingNumbers_209A {
 }
 /*
 What I Learned:
-
+Scanner Files
 
 Difficulties I had:
-
+None
 
 Sample Output:
+The number of numbers less than 500 is 263
+The number of numbers greater than or equal to 500 is 237
+The total number of numbers is 500
+ 
+ _____                   ____                              
+|_   _|__  _ __  _   _  |  _ \ __ _ _ __  _ __   __ _ ___  
+  | |/ _ \| '_ \| | | | | |_) / _` | '_ \| '_ \ / _` / __| 
+  | | (_) | | | | |_| | |  __/ (_| | |_) | |_) | (_| \__ \ 
+  |_|\___/|_| |_|\__, | |_|   \__,_| .__/| .__/ \__,_|___/ 
+                 |___/             |_|   |_|               
+ 
 
 
  */
