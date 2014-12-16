@@ -5,7 +5,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class DotLeader_500E {
-	
+
 	/* Program Name: Dot Leader
 	 * Version: 1.0
 	 * 
@@ -15,7 +15,7 @@ public class DotLeader_500E {
 	 * 
 	 * Description: Format a table of contents
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -32,7 +32,7 @@ public class DotLeader_500E {
 		//add the title to the sb
 		sb.append(title);
 		//loop to add leader to string builder
-		for (int i = 1; i<=(50 - (title.length()+page.length())); i++){
+		for (int i = 1; i <= (50 - (title.length() + page.length())); i++) {
 			sb.append(leader);
 		}
 		//add page number at the end
@@ -40,12 +40,11 @@ public class DotLeader_500E {
 		//output result
 		System.out.println("");
 		System.out.println(sb.toString());
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	private static String chooseLeader(){
+
+	private static String chooseLeader() {
 		System.out.print("Enter character you want to use as your leader: ");
 		return in.nextLine();
 	}

@@ -3,7 +3,7 @@ package me.Techtony96.QuarterTwo;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class MultiplesOf3And7_230A {
-	
+
 	/* Program Name: Multiples of 3 and 7
 	 * Version: 1.0
 	 * 
@@ -13,22 +13,17 @@ public class MultiplesOf3And7_230A {
 	 * 
 	 * Description: Find multiples of 3 or 7 under 100
 	 */
-	
 
 	public static void main(String[] args) {
-		
-		
+
 		System.out.println("Integers less than 100 that are evenly divisible by 3 or 7");
-		for (int i = 1; i<100; i++){
+		for (int i = 1; i < 100; i++) {
 			if (i % 3 == 0 || i % 7 == 0)
 				System.out.println(i);
 		}
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

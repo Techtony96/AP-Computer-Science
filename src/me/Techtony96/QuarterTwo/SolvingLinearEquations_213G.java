@@ -5,7 +5,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class SolvingLinearEquations_213G {
-	
+
 	/* Program Name: Solving Linear Equations
 	 * Version: 1.0
 	 * 
@@ -15,40 +15,37 @@ public class SolvingLinearEquations_213G {
 	 * 
 	 * Description:  Solve linear equations in the form Ax+b=0
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		//Prompt user to input 999 to end program
 		System.out.println("Enter 999 to end program, anything else to continue.");
 		//Create loop to loop program
-		while (in.nextDouble() != 999){
+		while (in.nextDouble() != 999) {
 			//prompt user for A
 			System.out.println("Enter A:");
 			double A = in.nextDouble();
-			
+
 			//prompt user for B
 			System.out.println("Enter B:");
 			double B = in.nextDouble();
-			
+
 			//If A is 0, there are infinite solutions
-			if (A == 0){
+			if (A == 0) {
 				System.out.println(A + "x + " + B + " = 0 --> There are Infinite Solutions");
 			} else {
 				//otherwise, solve and output an answer
-				System.out.println(A + "x + " + B + " = 0 --> X = " + -B/A);
+				System.out.println(A + "x + " + B + " = 0 --> X = " + -B / A);
 			}
-			
+
 			//Prompt user to input 999 to end program
 			System.out.println("Enter 999 to end program, anything else to continue.");
 		}
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
-		
+
 	}
-	
-	
 
 }
 /*

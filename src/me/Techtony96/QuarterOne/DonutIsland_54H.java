@@ -5,7 +5,7 @@ import me.Techtony96.Utilities.Circle;
 import me.Techtony96.Utilities.Round;
 
 public class DonutIsland_54H {
-	
+
 	/* Program Name: Donut Island
 	 * Version: 1.0
 	 * 
@@ -15,19 +15,16 @@ public class DonutIsland_54H {
 	 * 
 	 * Description: Find the area of an island with a lake in the middle of it.
 	 */
-	
 
 	public static void main(String[] args) {
 		Circle island = new Circle(2.08);
 		Circle lake = new Circle(0.95);
-		
+
 		System.out.println("The total area of Donut Island is: " + Round.hundredths(island.getArea() - lake.getArea()));
-		
-		BlockLetters.TONY_PAPPAS.outputBlockName();		
-		
+
+		BlockLetters.TONY_PAPPAS.outputBlockName();
+
 	}
-	
-	
 
 }
 /*

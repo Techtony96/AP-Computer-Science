@@ -6,7 +6,7 @@ import me.Techtony96.Utilities.BlockLetters;
 import me.Techtony96.Utilities.Round;
 
 public class BatterUp_52D {
-	
+
 	/* Program Name: Batter Up
 	 * Version: 1.0
 	 * 
@@ -16,25 +16,21 @@ public class BatterUp_52D {
 	 * 
 	 * Description: Find the batting average of someone
 	 */
-	
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		
+
 		System.out.println("Enter Number of Hits:");
 		Double hits = in.nextDouble();
 		System.out.println("Enter Number of times at Bat:");
 		Double bat = in.nextDouble();
 		System.out.println("Enter Number of Walks:");
 		Double walks = in.nextDouble();
-		
-		
-		System.out.println("Batting Average: " + Round.thousandths(hits/(bat - walks)));
-		BlockLetters.TONY_PAPPAS.outputBlockName();		
-		
+
+		System.out.println("Batting Average: " + Round.thousandths(hits / (bat - walks)));
+		BlockLetters.TONY_PAPPAS.outputBlockName();
+
 	}
-	
-	
 
 }
 /*

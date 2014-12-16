@@ -18,7 +18,6 @@ public class SumAndAverage_155T {
 	 * Description: Read data from a file and find the sum, count, and average
 	 */
 
-
 	public static void main(String[] args) {
 		//new file that we are getting data from
 		Scanner inFile = null;
@@ -36,11 +35,11 @@ public class SumAndAverage_155T {
 		double sum = 0;
 		double count = 0;
 		double average = 0;
-		while(inFile.hasNext()){
+		while (inFile.hasNext()) {
 			//define working next int
 			int nextInt = inFile.nextInt();
 			//break if next number is 0
-			if (nextInt == 0){
+			if (nextInt == 0) {
 				break;
 			}
 			//output the next int
@@ -52,11 +51,9 @@ public class SumAndAverage_155T {
 		//output results
 		System.out.println("The sum of the numbers = " + sum);
 		System.out.println("The number of scores = " + count);
-		System.out.println("The average of the numbers = " + (sum/count));
+		System.out.println("The average of the numbers = " + (sum / count));
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

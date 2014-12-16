@@ -6,7 +6,7 @@ import me.Techtony96.Utilities.BlockLetters;
 import me.Techtony96.Utilities.Round;
 
 public class MonthlyPay_58I {
-	
+
 	/* Program Name: Monthly Pay
 	 * Version: 1.0
 	 * 
@@ -16,17 +16,17 @@ public class MonthlyPay_58I {
 	 * 
 	 * Description: Figure out information about a loan
 	 */
-	
+
 	static double borrow = 0.0;
 	static double rate = 0.0;
 	static int months = 0;
-	
+
 	static double monthlypayment = 0.0;
 
 	public static void main(String[] args) {
 		//Initialize Scanner
 		Scanner in = new Scanner(System.in);
-		
+
 		//Gather information
 		System.out.println("The amount I wish to borrow is?");
 		borrow = in.nextDouble();
@@ -34,24 +34,23 @@ public class MonthlyPay_58I {
 		rate = in.nextDouble();
 		System.out.println("The number of months it will take me to pay off the load is?");
 		months = in.nextInt();
-		
+
 		System.out.println("");
-		
+
 		//Calculations and outputting results
 		monthlypayment = getMonthlyPayment(borrow, rate, months);
 		System.out.println("My monthly payments will be $" + Round.hundredths(monthlypayment));
-		System.out.println("Total Interest Paid is $" + Round.hundredths((monthlypayment*months)-borrow));
-		System.out.println("Total Amont paid is $" + Round.hundredths(monthlypayment*months));
-		
-		BlockLetters.TONY_PAPPAS.outputBlockName();		
-		
+		System.out.println("Total Interest Paid is $" + Round.hundredths((monthlypayment * months) - borrow));
+		System.out.println("Total Amont paid is $" + Round.hundredths(monthlypayment * months));
+
+		BlockLetters.TONY_PAPPAS.outputBlockName();
+
 	}
-	
+
 	//Get the monthly payment
-	public static double getMonthlyPayment(double P, double r, double m){
-		return (P * (r/1200.0) * ((Math.pow(1+(r/1200.0), m))/((Math.pow(1+(r/1200.0), m)-1))));
+	public static double getMonthlyPayment(double P, double r, double m) {
+		return (P * (r / 1200.0) * ((Math.pow(1 + (r / 1200.0), m)) / ((Math.pow(1 + (r / 1200.0), m) - 1))));
 	}
-	
 
 }
 /*

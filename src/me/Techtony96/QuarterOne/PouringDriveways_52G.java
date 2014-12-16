@@ -6,7 +6,7 @@ import me.Techtony96.Utilities.BlockLetters;
 import me.Techtony96.Utilities.Round;
 
 public class PouringDriveways_52G {
-	
+
 	/* Program Name: Pouring Driveways
 	 * Version: 1.0
 	 * 
@@ -16,25 +16,22 @@ public class PouringDriveways_52G {
 	 * 
 	 * Description: Finding the cost of a driveway
 	 */
-	
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		
+
 		System.out.println("Enter Length in Feet:");
 		double length = in.nextDouble();
 		System.out.println("Enter Width in Feet:");
 		double width = in.nextDouble();
-		length = length/3.0;
-		width = width/3.0;
-		double cost = Round.hundredths((length*width*(0.25/3)) * 70.0);
+		length = length / 3.0;
+		width = width / 3.0;
+		double cost = Round.hundredths((length * width * (0.25 / 3)) * 70.0);
 		System.out.println("Total Cost: $" + cost);
-		
-		BlockLetters.TONY_PAPPAS.outputBlockName();		
-		
+
+		BlockLetters.TONY_PAPPAS.outputBlockName();
+
 	}
-	
-	
 
 }
 /*

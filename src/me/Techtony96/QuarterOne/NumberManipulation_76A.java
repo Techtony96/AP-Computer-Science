@@ -5,7 +5,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class NumberManipulation_76A {
-	
+
 	/* Program Name: Number Manipulation
 	 * Version: 1.0
 	 * 
@@ -15,7 +15,6 @@ public class NumberManipulation_76A {
 	 * 
 	 * Description: we are manipulating numbers
 	 */
-	
 
 	public static void main(String[] args) {
 		//Define new scanner for user input
@@ -27,7 +26,7 @@ public class NumberManipulation_76A {
 		System.out.println(number);
 		//Show and multiply the number by 9
 		System.out.println("X9");
-		number *=9;
+		number *= 9;
 		System.out.println("-------------");
 		//Show and multiply the number by 12345679
 		System.out.println(number);
@@ -39,13 +38,10 @@ public class NumberManipulation_76A {
 		number *= 1000;
 		System.out.printf("%.0f     \"No Surprise\"?\n", number);
 		//System.out.println(String.valueOf(number) +  "    \"No Surprise\"?");
-		
-		
-		BlockLetters.TONY_PAPPAS.outputBlockName();		
-		
+
+		BlockLetters.TONY_PAPPAS.outputBlockName();
+
 	}
-	
-	
 
 }
 /*

@@ -22,7 +22,7 @@ public class Change {
 
 		//calculate change
 		double money = cash - total;
-		
+
 		//define variables
 		int twenties = 0;
 		int tens = 0;

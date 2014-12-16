@@ -23,17 +23,17 @@ public class BermudaTriangle_166G {
 	public static void main(String[] args) {
 		System.out.println("Enter # of Rows");
 		int rows = in.nextInt();
-		for (int column = 1; column <= rows; column++){
-			for (int row = 1; row <= column; row++){
-				if (row == 1 && column == 1){
-					for (int i = 1; i<= rows; i++){
+		for (int column = 1; column <= rows; column++) {
+			for (int row = 1; row <= column; row++) {
+				if (row == 1 && column == 1) {
+					for (int i = 1; i <= rows; i++) {
 						System.out.print(decFormat.format(i) + "    ");
 					}
 				} else {
-					if (column == 1){
+					if (column == 1) {
 						System.out.print(decFormat.format(row) + "    ");
 					} else {
-						System.out.print(decFormat.format(column*row) + "    ");
+						System.out.print(decFormat.format(column * row) + "    ");
 					}
 				}
 			}
@@ -41,8 +41,6 @@ public class BermudaTriangle_166G {
 		}
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

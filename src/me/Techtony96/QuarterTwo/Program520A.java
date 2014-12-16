@@ -14,28 +14,23 @@ public class Program520A {
 	 * Description: Output all mRNA
 	 */
 
-
-
 	public static void main(String[] args) {
 		//List of the bases
-		String bases[] = new String[] { "A", "U", "C", "G" }; 
+		String bases[] = new String[] { "A", "U", "C", "G" };
 		//loop to output the bases
-		for ( int i= 0; i < bases.length; ++i ) {
-			for ( int j= 0; j < bases.length; ++j ) {
-				for ( int k= 0; k < bases.length; ++k ) {
+		for (int i = 0; i < bases.length; ++i) {
+			for (int j = 0; j < bases.length; ++j) {
+				for (int k = 0; k < bases.length; ++k) {
 					//output current result
-					System.out.print( bases[i] + bases[j] + bases[k] + "        "); 
+					System.out.print(bases[i] + bases[j] + bases[k] + "        ");
 				}
 				//new row
 				System.out.println();
 			}
 		}
 
-
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

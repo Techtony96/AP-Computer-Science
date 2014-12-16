@@ -6,7 +6,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class SequenceWithIntervalChange_202A {
-	
+
 	/* Program Name: Sequence With Interval Change
 	 * Version: 1.0
 	 * 
@@ -16,32 +16,30 @@ public class SequenceWithIntervalChange_202A {
 	 * 
 	 * Description: Write a program that will reproduce the following sequence of numbers.
 	 */
-	
+
 	static DecimalFormat money = new DecimalFormat("$0.00");
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		//Define loop to go through each number
-		for (int i = 2; i<= 69; i++){
+		for (int i = 2; i <= 69; i++) {
 			//if i is less than 20 and divisible by 2
-			if (i<= 20 && i%2==0){
+			if (i <= 20 && i % 2 == 0) {
 				//output number
 				System.out.println(i);
-			//if i is between 21 and 41, and has been incremented by 3
-			} else if (i> 20 && i<= 41 && i%3==2){
+				//if i is between 21 and 41, and has been incremented by 3
+			} else if (i > 20 && i <= 41 && i % 3 == 2) {
 				//output number
 				System.out.println(i);
-			//if i is between 32 and 69 and has been incremented by 4
-			} else if (i> 41 && i<= 69 && i%4==1){
+				//if i is between 32 and 69 and has been incremented by 4
+			} else if (i > 41 && i <= 69 && i % 4 == 1) {
 				//output number
 				System.out.println(i);
 			}
 		}
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

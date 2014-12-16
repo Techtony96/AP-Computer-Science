@@ -3,7 +3,7 @@ package me.Techtony96.QuarterTwo;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class DontFenceMeIn_215C {
-	
+
 	/* Program Name: Don't Fence Me In
 	 * Version: 1.0
 	 * 
@@ -20,13 +20,13 @@ public class DontFenceMeIn_215C {
 		int currentArea = 0;
 		int maxArea = 0;
 		int MaxX = 0;
-		
+
 		//define loop to check each value of X
-		while (x<100){
+		while (x < 100) {
 			//calculate the area with side x
-			currentArea = x*(100-2*x);
+			currentArea = x * (100 - 2 * x);
 			//if current area is larger than maxArea
-			if (currentArea > maxArea){
+			if (currentArea > maxArea) {
 				//update MaxArea and MaxX
 				maxArea = currentArea;
 				MaxX = x;
@@ -34,11 +34,11 @@ public class DontFenceMeIn_215C {
 			//increment x
 			x++;
 		}
-		
+
 		//output results
 		System.out.println("With 100 yards of fencing material:");
-		System.out.println("A rectangle " + MaxX + " X " + (100-2*MaxX) + " yards produces the maximum area of " + maxArea + " square yards");
-		
+		System.out.println("A rectangle " + MaxX + " X " + (100 - 2 * MaxX) + " yards produces the maximum area of " + maxArea + " square yards");
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
 }

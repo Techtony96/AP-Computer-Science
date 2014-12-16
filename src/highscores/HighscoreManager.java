@@ -3,23 +3,21 @@ package highscores;
 import java.util.*;
 import java.io.*;
 
-
 public class HighscoreManager {
-    // An arraylist of the type "score" we will use to work with the scores inside the class
-    private ArrayList<Score> scores;
+	// An arraylist of the type "score" we will use to work with the scores inside the class
+	private ArrayList<Score> scores;
 
-    // The name of the file where the highscores will be saved
-    private static final String HIGHSCORE_FILE = "scores.dat";
+	// The name of the file where the highscores will be saved
+	private static final String HIGHSCORE_FILE = "scores.dat";
 
-    //Initialising an in and outputStream for working with the file
-    ObjectOutputStream outputStream = null;
-    ObjectInputStream inputStream = null;
+	//Initialising an in and outputStream for working with the file
+	ObjectOutputStream outputStream = null;
+	ObjectInputStream inputStream = null;
 
-    public HighscoreManager() {
-        //initialising the scores-arraylist
-        scores = new ArrayList<Score>();
-    }
-    
+	public HighscoreManager() {
+		//initialising the scores-arraylist
+		scores = new ArrayList<Score>();
+	}
 
 	public ArrayList<Score> getScores() {
 		loadScoreFile();

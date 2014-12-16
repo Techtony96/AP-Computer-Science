@@ -6,7 +6,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class EC_Program516A {
-	
+
 	/* Program Name: Alphabet 2 Numbers
 	 * Version: 1.0
 	 * 
@@ -16,7 +16,7 @@ public class EC_Program516A {
 	 * 
 	 * Description: Convert letter phone numbers to numbers
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -53,29 +53,26 @@ public class EC_Program516A {
 		number = number.replace('y', '9');
 		number = number.replaceAll(" ", "");
 		number = number.replaceAll("-", "");
-		
+
 		//new stringbuilder for formatting
 		StringBuilder sb = new StringBuilder();
 		//add the number to it
 		sb.append(number);
 		//if it has a country code
-		if (number.length() == 11){
+		if (number.length() == 11) {
 			sb.insert(1, "-");
 			sb.insert(5, "-");
 			sb.insert(9, "-");
-		//if it does not have a country code
-		} else if (number.length() == 10){
+			//if it does not have a country code
+		} else if (number.length() == 10) {
 			sb.insert(3, "-");
 			sb.insert(7, "-");
 		}
 		//output result
 		System.out.println("The number to dial is: " + sb.toString());
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

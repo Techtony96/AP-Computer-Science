@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class DecimalEquivalents_166E {
-	
+
 	/* Program Name: decimal equivalents
 	 * Version: 1.0
 	 * 
@@ -17,25 +17,22 @@ public class DecimalEquivalents_166E {
 	 * with the numerator less than the denominator.  
 	 * Round the decimal to 5 places.
 	 */
-	
+
 	//Define new Decimal Format
 	static DecimalFormat decimal = new DecimalFormat("0.00000");
 
 	public static void main(String[] args) {
 		//Define loop for lower number
-		for (int lower = 2; lower <= 15; lower++){
+		for (int lower = 2; lower <= 15; lower++) {
 			//define loop for upper number
-			for (int upper = 1; upper < lower; upper++){
+			for (int upper = 1; upper < lower; upper++) {
 				//output results
-				System.out.println(upper + "/" + lower + "   " + decimal.format((double) upper/ (double) lower));
+				System.out.println(upper + "/" + lower + "   " + decimal.format((double) upper / (double) lower));
 			}
 		}
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

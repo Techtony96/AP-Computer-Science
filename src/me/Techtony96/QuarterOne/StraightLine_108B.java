@@ -17,14 +17,13 @@ public class StraightLine_108B {
 	 * Description: Calculating Yearly Depreciation
 	 */
 
-
 	public static void main(String[] args) {
 		//Define scanner
 		Scanner in = new Scanner(System.in);
 		double number = 0;
 
 		//Loop
-		for (int i = 1; i <= 4; i++){
+		for (int i = 1; i <= 4; i++) {
 			System.out.println("Run #" + i);
 			System.out.println("Enter Price");
 			double price = in.nextDouble();
@@ -32,7 +31,7 @@ public class StraightLine_108B {
 			double value = in.nextDouble();
 			System.out.println("Enter Estimated Life in Years");
 			double years = in.nextDouble();
-			number = (price-value)/years;
+			number = (price - value) / years;
 			System.out.println("Annual Depreciation = " + Round.hundredths(number));
 			System.out.println("");
 		}
@@ -41,8 +40,6 @@ public class StraightLine_108B {
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 
 	}
-
-
 
 }
 /*

@@ -6,7 +6,7 @@ import me.Techtony96.Utilities.BlockLetters;
 import me.Techtony96.Utilities.Round;
 
 public class CDsThatDontPlayMusic_162I {
-	
+
 	/* Program Name: CD's That Don't Play Music
 	 * Version: 1.0
 	 * 
@@ -16,28 +16,24 @@ public class CDsThatDontPlayMusic_162I {
 	 * 
 	 * Description: Finding the value of a CD after 5 years
 	 */
-	
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter initial investment");
 		double initialInvestment = in.nextDouble();
 		double currentCDValue = initialInvestment;
-		for (int i = 1; i<=5;i++){
+		for (int i = 1; i <= 5; i++) {
 			System.out.println("Enter Rate for Year " + i);
 			double rate = in.nextDouble();
-			rate = rate/100.00;
-			System.out.println("You earned $" + Round.hundredths(((currentCDValue * (rate+1)) - currentCDValue)) + " interest.");
+			rate = rate / 100.00;
+			System.out.println("You earned $" + Round.hundredths(((currentCDValue * (rate + 1)) - currentCDValue)) + " interest.");
 			currentCDValue += (currentCDValue * rate);
-			
+
 		}
 		System.out.println("Your CD is now worth $" + Round.hundredths(currentCDValue));
 
-		
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

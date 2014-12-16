@@ -3,7 +3,7 @@ package me.Techtony96.QuarterOne;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class FunctionChart_122C {
-	
+
 	/* Program Name: Function Chart
 	 * Version: 1.0
 	 * 
@@ -13,7 +13,6 @@ public class FunctionChart_122C {
 	 * 
 	 * Description: Make a function chart
 	 */
-	
 
 	public static void main(String[] args) {
 		//Define variables for each column and the number that they started in.
@@ -22,22 +21,18 @@ public class FunctionChart_122C {
 		int column3 = 4;
 		int column4 = 4;
 		//Loop through each row
-		for (int i=1; i<=5;i++){
+		for (int i = 1; i <= 5; i++) {
 			//Output the row
-			System.out.println(column1 + "  " + column2 + "  " + column3 + "  " + column4 );
+			System.out.println(column1 + "  " + column2 + "  " + column3 + "  " + column4);
 			//Find the next number in the row.
 			column1 += 2;
 			column2 += 2;
 			column3 += 4;
-			column4 = column1*column1;
+			column4 = column1 * column1;
 		}
-		
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

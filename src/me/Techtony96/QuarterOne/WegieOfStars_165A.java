@@ -5,7 +5,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class WegieOfStars_165A {
-	
+
 	/* Program Name: Wegie of Stars
 	 * Version: 1.0
 	 * 
@@ -15,25 +15,22 @@ public class WegieOfStars_165A {
 	 * 
 	 * Description: Output stars
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		System.out.println("Enter Number of Stars:");
 		int stars = in.nextInt();
-		for (int line = stars; line > 0; line--){
-			for (int i = stars; i > 1; i--){
+		for (int line = stars; line > 0; line--) {
+			for (int i = stars; i > 1; i--) {
 				System.out.print("*");
 			}
 			System.out.println("*");
 			stars -= 1;
 		}
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

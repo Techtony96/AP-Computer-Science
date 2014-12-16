@@ -14,7 +14,6 @@ public class PopulationGrowth_162B {
 	 * Description: Find the amount of time it takes to double the population
 	 */
 
-
 	public static void main(String[] args) {
 		double Population = 236000000;
 		double percent = 1.029;
@@ -22,10 +21,10 @@ public class PopulationGrowth_162B {
 		System.out.println("________Growth Rate 2.9% annually________");
 		System.out.println("     Year   Population (in millions)     ");
 		int i = 1991;
-		while(true){
-			Population =  (Population*percent);
-			System.out.println("     "+i+"    "+(int)Population/1000000);
-			if (Population >= 239000000*2){
+		while (true) {
+			Population = (Population * percent);
+			System.out.println("     " + i + "    " + (int) Population / 1000000);
+			if (Population >= 239000000 * 2) {
 				System.out.println("The population will double by the year " + i);
 				break;
 			}
@@ -34,8 +33,6 @@ public class PopulationGrowth_162B {
 
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

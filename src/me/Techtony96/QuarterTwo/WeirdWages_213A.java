@@ -27,13 +27,13 @@ public class WeirdWages_213A {
 
 	public static void main(String[] args) throws IOException {
 		//Get the file
-		BufferedReader  inFile = new BufferedReader (new FileReader(System.getProperty("user.dir") + "/src/Files/prog213a.dat"));
+		BufferedReader inFile = new BufferedReader(new FileReader(System.getProperty("user.dir") + "/src/Files/prog213a.dat"));
 		//Define a variable to store the current line
 		String line;
 		//define week calculating pay for curent week
 		int week = 1;
 		//repeat for each line in the file
-		while((line = inFile.readLine()) != null) {
+		while ((line = inFile.readLine()) != null) {
 			//output the hours worked from the file
 			System.out.println("Hours worked: " + line);
 			//output the week #
@@ -44,63 +44,61 @@ public class WeirdWages_213A {
 			int[] hourResults = new int[hours.length];
 			//parse the strings to ints
 			for (int i = 0; i < hours.length; i++) {
-			    try {
-			    	hourResults[i] = Integer.parseInt(hours[i]);
-			    } catch (NumberFormatException nfe) {
-			    	nfe.printStackTrace();
-			    }
+				try {
+					hourResults[i] = Integer.parseInt(hours[i]);
+				} catch (NumberFormatException nfe) {
+					nfe.printStackTrace();
+				}
 			}
 			//define a variable for amountPayed and totalhours
 			double amountPayed = 0;
 			int totalWeekdayHours = 0;
 			//calcualte amount payed for each day
-			for (int i = 0; i<=6;i++){
+			for (int i = 0; i <= 6; i++) {
 				//define variable to hold hours for today
 				int currentHours = hourResults[i];
-				
+
 				//if saturday
-				if (i == 6){
+				if (i == 6) {
 					//get paid extra
-					amountPayed += currentHours*2.25*10.0; 
+					amountPayed += currentHours * 2.25 * 10.0;
 					//end of week calculation for more than 40 hours
-					if (totalWeekdayHours > 40){
+					if (totalWeekdayHours > 40) {
 						//get paid extra
-						amountPayed += (totalWeekdayHours-40)*2.5;
+						amountPayed += (totalWeekdayHours - 40) * 2.5;
 					}
 					//if sunday
-				} else if (i == 0){
+				} else if (i == 0) {
 					//get paid extra
-					amountPayed += currentHours*1.5*10.0;
+					amountPayed += currentHours * 1.5 * 10.0;
 					//if weekday
 				} else {
 					//add weekday hours to total hours
 					totalWeekdayHours += currentHours;
 					//if worked more than 8 hours
-					if (currentHours > 8){
+					if (currentHours > 8) {
 						//get paid extra
 						amountPayed += (currentHours - 8) * 11.5;
 						amountPayed += 80;
-					//otherwise...
+						//otherwise...
 					} else {
 						//get paid $10 an hour :(
 						amountPayed += currentHours * 10.0;
 					}
 				}
-				
+
 			}
-			
+
 			//output weekly pay
 			System.out.println(money.format(amountPayed));
 		}
-		
+
 		//end of file
 		System.out.println("");
 		System.out.println("End of File");
 		inFile.close();
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

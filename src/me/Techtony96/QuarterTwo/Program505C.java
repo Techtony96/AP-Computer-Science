@@ -42,8 +42,6 @@ public class Program505C {
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
 
-
-
 }
 /*
 What I Learned:

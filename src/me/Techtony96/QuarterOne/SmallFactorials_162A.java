@@ -5,7 +5,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class SmallFactorials_162A {
-	
+
 	/* Program Name:
 	 * Version: 1.0
 	 * 
@@ -15,7 +15,6 @@ public class SmallFactorials_162A {
 	 * 
 	 * Description: 
 	 */
-	
 
 	public static void main(String[] args) {
 		//Define scanner for user input
@@ -23,13 +22,13 @@ public class SmallFactorials_162A {
 		//define boolean to control program flow
 		boolean programContinue = true;
 		//while statement to repeat program
-		while(programContinue){
+		while (programContinue) {
 			//ask for user input
 			System.out.println("Enter a Number [zero to quit]");
 			//define a variable for user input
 			int userInput = in.nextInt();
 			//if statement to end program
-			if (userInput == 0){
+			if (userInput == 0) {
 				//tell program not to loop again
 				programContinue = false;
 				//Stop the current while statement
@@ -38,7 +37,7 @@ public class SmallFactorials_162A {
 				//define variable to store result
 				double factorialResult = 1;
 				//loop to go from 1 to userInput
-				for (int i = 1; i <= userInput; i++){
+				for (int i = 1; i <= userInput; i++) {
 					factorialResult *= i;
 				}
 				//ouput result
@@ -46,12 +45,9 @@ public class SmallFactorials_162A {
 				System.out.println("");
 			}
 		}
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

@@ -30,48 +30,45 @@ public class RandomWalk_214A {
 		//output table header
 		System.out.println("Run   Average    Greatest # of steps");
 		//run test 20 times
-		for (int z = 1; z <= 20; z++){
+		for (int z = 1; z <= 20; z++) {
 			//reset variables
 			maxTimes = 0;
 			totalTimes = 0;
 			//run simulation 1000 times
-			for (int i = 1; i <= 1000; i++){
+			for (int i = 1; i <= 1000; i++) {
 				//reset more variables
 				int times = 0;
 				currentPosition = 3.5;
 				//continue forever (until break)
-				while (true){
+				while (true) {
 					//increment number of times ran
 					times++;
 					//if true, step forward, if false, step backward
-					if (r.nextBoolean()){
+					if (r.nextBoolean()) {
 						currentPosition = currentPosition + 1;
 					} else {
 						currentPosition = currentPosition - 1;
 					}
-					if (currentPosition >= 7 || currentPosition <= 0){
+					if (currentPosition >= 7 || currentPosition <= 0) {
 						//Off the bridge!
 						break;
 					}
 				}
 				//if times taken is more than the max times taken
-				if (times > maxTimes){
+				if (times > maxTimes) {
 					//update max times taken
 					maxTimes = times;
 				}
 				//increments the total times taken
 				totalTimes = times + totalTimes;
-				
+
 			}
 			//output result to table
-			System.out.println("#" + z + "    " + Round.hundredths(totalTimes/1000.0) + "    " + maxTimes);
+			System.out.println("#" + z + "    " + Round.hundredths(totalTimes / 1000.0) + "    " + maxTimes);
 		}
-		
 
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

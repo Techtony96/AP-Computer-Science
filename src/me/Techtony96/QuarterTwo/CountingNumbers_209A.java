@@ -30,11 +30,11 @@ public class CountingNumbers_209A {
 		//get File that we are working with
 		Scanner inFile = new Scanner(new File(System.getProperty("user.dir") + "/src/Files/p209a.dat"));
 		//while the file has another valule
-		while(inFile.hasNext()){
+		while (inFile.hasNext()) {
 			//define working next int
 			int nextInt = inFile.nextInt();
 			//determine if number is less than or more than 500
-			if (nextInt < 500 ){
+			if (nextInt < 500) {
 				less500++;
 			} else {
 				more500++;
@@ -44,14 +44,10 @@ public class CountingNumbers_209A {
 		//Output results
 		System.out.println("The number of numbers less than 500 is " + less500);
 		System.out.println("The number of numbers greater than or equal to 500 is " + more500);
-		System.out.println("The total number of numbers is " + (less500+more500));
-
-
+		System.out.println("The total number of numbers is " + (less500 + more500));
 
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

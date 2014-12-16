@@ -3,7 +3,7 @@ package me.Techtony96.QuarterTwo;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class UlamHypothesis_230B {
-	 
+
 	/* Program Name: Ulam Hypothesis
 	 * Version: 1.0
 	 * 
@@ -13,21 +13,20 @@ public class UlamHypothesis_230B {
 	 * 
 	 * Description: Test Ulam Hupothesis
 	 */
-	
 
 	public static void main(String[] args) {
 		//define variable to manipulate
 		int currentNumber;
 		//define loop to test numbers 1 - 25
-		for (int i = 1; i <= 25; i++){
+		for (int i = 1; i <= 25; i++) {
 			//set currentNumber to i
 			currentNumber = i;
 			//output beginning of table
 			System.out.print(currentNumber + ": ");
 			//while the number is more than 1
-			while (currentNumber > 1){
+			while (currentNumber > 1) {
 				//test if the number is even
-				if (currentNumber % 2 == 0){
+				if (currentNumber % 2 == 0) {
 					//number is even
 					currentNumber /= 2;
 					System.out.print(currentNumber + " ");
@@ -40,11 +39,9 @@ public class UlamHypothesis_230B {
 			}
 			//output line break
 			System.out.print("\n");
-		}	
+		}
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

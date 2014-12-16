@@ -5,7 +5,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class IdentityTheft_72A {
-	
+
 	/* Program Name: Identity Theft
 	 * Version: 1.0
 	 * 
@@ -15,7 +15,6 @@ public class IdentityTheft_72A {
 	 * 
 	 * Description: Identity Theft
 	 */
-	
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -29,13 +28,10 @@ public class IdentityTheft_72A {
 		char[] c = Character.toChars(remainder);
 		String s = new StringBuilder().append("").append(c[0]).toString();
 		System.out.println("The correct number and code is " + num1 + " " + num2 + " " + num3 + " " + num4 + " " + s);
-		
-		
-		BlockLetters.TONY_PAPPAS.outputBlockName();		
-		
+
+		BlockLetters.TONY_PAPPAS.outputBlockName();
+
 	}
-	
-	
 
 }
 /*

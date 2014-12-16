@@ -5,7 +5,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class HourlyPay_122B {
-	
+
 	/* Program Name: Hourly Pay
 	 * Version: 1.0
 	 * 
@@ -15,7 +15,6 @@ public class HourlyPay_122B {
 	 * 
 	 * Description: Print a chart of a person's hourly pay
 	 */
-	
 
 	public static void main(String[] args) {
 		//Define new scanner for user input
@@ -26,20 +25,14 @@ public class HourlyPay_122B {
 		double hourlypay = in.nextDouble();
 		System.out.println("Hours    Pay");
 		//Loop for 1 to 40
-		for (int i = 1; i<=40; i++){
+		for (int i = 1; i <= 40; i++) {
 			//Output hours worked and amount paid
-			System.out.println(" " + i + "    $" + i*hourlypay);
+			System.out.println(" " + i + "    $" + i * hourlypay);
 		}
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 
-		
-	
-
-		
 	}
-	
-	
 
 }
 /*

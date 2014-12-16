@@ -6,7 +6,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class Main {
-	
+
 	/* Program Name:
 	 * Version: 1.0
 	 * 
@@ -16,18 +16,14 @@ public class Main {
 	 * 
 	 * Description: 
 	 */
-	
+
 	static DecimalFormat money = new DecimalFormat("$0.00");
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

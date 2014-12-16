@@ -14,7 +14,6 @@ public class MrAscii_500a {
 	 * Description: Mr. Ascii Program
 	 */
 
-
 	public static void main(String[] args) {
 
 		for (char c = ' '; c <= 'Z'; ++c) {
@@ -29,8 +28,6 @@ public class MrAscii_500a {
 
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

@@ -24,15 +24,15 @@ public class ChallengingCrossing_168H {
 		//Define spaceing
 		int space = 21;
 		int leftSpace = 0;
-		
+
 		//define starting numbers
 		int left = 1;
 		int right = 1;
-		
+
 		//first loop for top of the x
-		while(space >= 0){
+		while (space >= 0) {
 			//Printing out the correct amount of leftspace
-			for (int i = 1; i <= leftSpace; i++){
+			for (int i = 1; i <= leftSpace; i++) {
 				System.out.print(" ");
 			}
 			//outputting the number for the line on the left
@@ -40,7 +40,7 @@ public class ChallengingCrossing_168H {
 			//incrementing the left number for the next line
 			left++;
 			//printing out the correct amount of space inbetween numbers
-			for (int i = 1; i <= space; i++){
+			for (int i = 1; i <= space; i++) {
 				System.out.print(" ");
 			}
 			//output the nuber for the line on the right
@@ -48,11 +48,11 @@ public class ChallengingCrossing_168H {
 			//incrementing the right number for the next line
 			right++;
 			//changing spacing for next line
-			space-=2;
+			space -= 2;
 			leftSpace++;
 		}
 		//loop for spacing for center number
-		for (int i = 1; i <= leftSpace; i++){
+		for (int i = 1; i <= leftSpace; i++) {
 			System.out.print(" ");
 		}
 		//output center number
@@ -63,9 +63,9 @@ public class ChallengingCrossing_168H {
 		leftSpace = 10;
 		space = 1;
 		//loop for bottom
-		while (leftSpace >= 0){
+		while (leftSpace >= 0) {
 			//loop for left space
-			for (int i = 1; i <= leftSpace; i++){
+			for (int i = 1; i <= leftSpace; i++) {
 				System.out.print(" ");
 			}
 			//number output
@@ -73,21 +73,19 @@ public class ChallengingCrossing_168H {
 			//incrementing
 			right++;
 			//outputting space
-			for (int i = 1; i <= space; i++){
+			for (int i = 1; i <= space; i++) {
 				System.out.print(" ");
 			}
 			//outputting line number
 			System.out.println(format.format(left));
 			//incrementing
 			left++;
-			space +=2;
+			space += 2;
 			leftSpace--;
 		}
 
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

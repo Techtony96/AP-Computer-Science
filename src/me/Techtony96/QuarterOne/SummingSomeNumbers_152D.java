@@ -5,7 +5,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class SummingSomeNumbers_152D {
-	
+
 	/* Program Name: Summing Some Numbers
 	 * Version: 1.0
 	 * 
@@ -15,7 +15,6 @@ public class SummingSomeNumbers_152D {
 	 * 
 	 * Description: Find the sum and average of some numbers
 	 */
-	
 
 	public static void main(String[] args) {
 		//Define scanner to get user input
@@ -29,23 +28,20 @@ public class SummingSomeNumbers_152D {
 		int sum = 0;
 		double average;
 		//define loop to loop from startingNumber to endingNumber
-		for (int i = startingNumber; i <= endingNumber; i++){
+		for (int i = startingNumber; i <= endingNumber; i++) {
 			sum += i;
 			System.out.println(i);
 		}
 		//Calculate the difference between the numbers
-		double difference = endingNumber-startingNumber + 1;
+		double difference = endingNumber - startingNumber + 1;
 		//Calculate the average
-		average = sum/difference;
+		average = sum / difference;
 		//Output the results
 		System.out.println("The sum from " + startingNumber + " to " + endingNumber + " is " + sum);
 		System.out.println("The Average from " + startingNumber + " to " + endingNumber + " is " + average);
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

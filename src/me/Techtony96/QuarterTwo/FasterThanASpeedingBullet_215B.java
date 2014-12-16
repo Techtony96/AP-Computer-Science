@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class FasterThanASpeedingBullet_215B {
-	 
+
 	/* Program Name: Faster Than A Speeding Bullet
 	 * Version: 1.0
 	 * 
@@ -15,7 +15,7 @@ public class FasterThanASpeedingBullet_215B {
 	 * 
 	 * Description: Calculate the max height of a bullet shot upwards
 	 */
-	
+
 	static DecimalFormat dec = new DecimalFormat("0");
 
 	public static void main(String[] args) {
@@ -25,9 +25,9 @@ public class FasterThanASpeedingBullet_215B {
 		double height = 0;
 		double maxHeight = 0;
 		//define a loop to calculate each value of t
-		while (t < 60){
+		while (t < 60) {
 			//calculate current height
-			height = 960*t - 16*Math.pow(t, 2);
+			height = 960 * t - 16 * Math.pow(t, 2);
 			//compare current height to max height
 			if (height > maxHeight)
 				//set max height to current height
@@ -35,14 +35,12 @@ public class FasterThanASpeedingBullet_215B {
 			//increase time by 1
 			t++;
 		}
-		
+
 		//outut results
 		System.out.println("The maximum height reached by the bullet is " + dec.format(maxHeight) + " feet.");
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

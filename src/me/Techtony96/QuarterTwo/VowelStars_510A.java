@@ -7,7 +7,7 @@ import me.Techtony96.Utilities.BlockLetters;
 import me.Techtony96.Utilities.Output;
 
 public class VowelStars_510A {
-	
+
 	/* Program Name:
 	 * Version: 1.0
 	 * 
@@ -17,28 +17,25 @@ public class VowelStars_510A {
 	 * 
 	 * Description: 
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		System.out.print("Enter your full name: ");
 		String name = in.nextLine();
-		char[] vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
-		for (char vowel: vowels){
+		char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+		for (char vowel : vowels) {
 			name = name.replace(vowel, '*');
 		}
-		
-		if (name.length() % 2 == 0){
+
+		if (name.length() % 2 == 0) {
 			name = name.replaceAll(" ", "  ");
 		}
-		
+
 		Output.center(name);
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

@@ -3,7 +3,7 @@ package me.Techtony96.QuarterOne;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class From3to9669_152A {
-	
+
 	/* Program Name: From 3 to 1969
 	 * Version: 1.0
 	 * 
@@ -13,28 +13,23 @@ public class From3to9669_152A {
 	 * 
 	 * Description: Find the sum of this series
 	 */
-	
 
 	public static void main(String[] args) {
 		//Define variable to keep track of the sum.
 		int number = 0;
 		//Define loop to count from 3 to 9669
-		for (int i = 3; i<=9669; i++){
+		for (int i = 3; i <= 9669; i++) {
 			//Check if the current number (i) is divisible by 3
-			if (i % 3 == 0){
+			if (i % 3 == 0) {
 				//If it is divisible, add it to number
 				number += i;
 			}
 		}
 		//Output the result
 		System.out.println("The sum of the multiples of 3 from 3 to 9669 is " + number);
-		
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

@@ -6,7 +6,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class MinimumWage_166D {
-	
+
 	/* Program Name: Minimum Wage
 	 * Version: 1.0
 	 * 
@@ -16,29 +16,26 @@ public class MinimumWage_166D {
 	 * 
 	 * Description: Find the minimum wage of employees at $4/hour
 	 */
-	
+
 	static DecimalFormat money = new DecimalFormat("$0.00");
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		//Define loop for employee count
-		for (int employeeCount = 3; employeeCount <= 6; employeeCount++){
+		for (int employeeCount = 3; employeeCount <= 6; employeeCount++) {
 			//output current number of employees
 			System.out.println("Wages for " + employeeCount + " employees");
 			System.out.println("");
 			//define loop for number of hours worked
-			for (int hoursWorked = 10; hoursWorked <= 40; hoursWorked += 10){
+			for (int hoursWorked = 10; hoursWorked <= 40; hoursWorked += 10) {
 				//output results
-				System.out.println("For " + hoursWorked + " hours worked, the wages total " + money.format(4*employeeCount*hoursWorked));
+				System.out.println("For " + hoursWorked + " hours worked, the wages total " + money.format(4 * employeeCount * hoursWorked));
 			}
 			System.out.println("");
 		}
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

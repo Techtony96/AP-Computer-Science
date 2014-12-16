@@ -8,7 +8,7 @@ import me.Techtony96.Utilities.Round;
 import me.Techtony96.Utilities.Temperature;
 
 public class WeatherPerson_213Dii {
-	
+
 	/* Program Name: Weather Person
 	 * Version: 1.0
 	 * 
@@ -18,16 +18,16 @@ public class WeatherPerson_213Dii {
 	 * 
 	 * Description: Convert Celsius to F
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
+
 		System.out.print("Enter Celsius Temperature: ");
 		double C = in.nextDouble();
 		double F = Temperature.convertCToF(C);
 		System.out.println("Fahrenheit Temperature = " + Round.tenths(F));
-		if (F >= 85){
+		if (F >= 85) {
 			System.out.println("Swimming Today!");
 		} else if (Order.isBetween(F, 70, 84.999)) {
 			System.out.println("Tennis Today!");
@@ -38,11 +38,9 @@ public class WeatherPerson_213Dii {
 		} else {
 			System.out.println("Chess Today!");
 		}
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

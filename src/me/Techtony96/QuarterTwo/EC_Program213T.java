@@ -21,7 +21,7 @@ public class EC_Program213T {
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		while(true){
+		while (true) {
 			//output header
 			System.out.println("NATIONAL PARCEL SERVICES\nPACKAGE DATA\n\nLENGTH    WIDTH     DEPTH    WEIGHT");
 			//store dimensions and weight
@@ -31,43 +31,40 @@ public class EC_Program213T {
 			double weight = in.nextDouble();
 
 			//if package is too heavy
-			if (weight > 50){
+			if (weight > 50) {
 				System.out.println("Package Refused--Package Weight Exceeds 50 Pounds");
 				break;
 			}
-			
+
 			//if dimensions exceed 3 feet
-			if (length > 3|| width > 3 || depth > 3){
+			if (length > 3 || width > 3 || depth > 3) {
 				System.out.println("Package Refused--Package Dimensions Exceed 3 Feet");
 				break;
 			}
-			
+
 			//calculate weight cost
 			double weightCost = 0.08;
-			if (weight > 20 && weight <= 40){
+			if (weight > 20 && weight <= 40) {
 				weightCost = 0.10;
 			} else if (weight > 40) {
 				weightCost = 0.15;
 			}
-			
+
 			//calculate volume surcharge
 			double volumeSurcharge = 0;
-			if (length*width*depth > 18){
+			if (length * width * depth > 18) {
 				volumeSurcharge = 1.00;
 			}
 
 			//output costs
 			System.out.println("BASE RATE      $0.75");
-			System.out.println("Weight @" + weightCost + "      " + money.format(weightCost*weight));
+			System.out.println("Weight @" + weightCost + "      " + money.format(weightCost * weight));
 			System.out.println("Volume Surcharge $" + volumeSurcharge);
-			System.out.println("      Total Due: " + money.format(0.75 + weightCost*weight + volumeSurcharge));
-			
+			System.out.println("      Total Due: " + money.format(0.75 + weightCost * weight + volumeSurcharge));
 
 		}
-	//	BlockLetters.TONY_PAPPAS.outputBlockName();
+		//	BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-
-
 
 }
 /*

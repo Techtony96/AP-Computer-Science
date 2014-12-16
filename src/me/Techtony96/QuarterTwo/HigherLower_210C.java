@@ -33,16 +33,16 @@ public class HigherLower_210C {
 		System.out.println("Guess the number I am thinking of! (1-100)");
 		input = in.nextInt();
 		//Repeat until user guesses it correctly
-		while (true){
+		while (true) {
 			//increment tries by 1
 			tries++;
 			//if user guessed it correctly
-			if (input == guess){
+			if (input == guess) {
 				//say the player won!
 				System.out.println("YOU GUESSED IT! It took you " + tries + " tries!");
 				break;
 				//too high
-			} else if (input > guess){
+			} else if (input > guess) {
 				System.out.println("Too high, try again.");
 				//too low
 			} else {
@@ -55,13 +55,13 @@ public class HigherLower_210C {
 		//Ask the user for their name for the high schore table
 		System.out.println("Enter your name for the High Score Table!");
 		//add score to table
-		hm.addScore(in.next(),tries);
+		hm.addScore(in.next(), tries);
 		//output the current high score table
 		System.out.print(hm.getHighscoreString());
 
 		//ask the user if they want to play again
 		System.out.println("Do you want to play again? (Type Yes or No)");
-		if (in.next().toLowerCase().trim().equals("yes")){
+		if (in.next().toLowerCase().trim().equals("yes")) {
 			main(args);
 		} else {
 			System.out.println("Thanks for playing!");

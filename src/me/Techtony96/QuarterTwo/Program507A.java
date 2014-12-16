@@ -7,7 +7,7 @@ import me.Techtony96.Utilities.BlockLetters;
 import me.Techtony96.Utilities.Output;
 
 public class Program507A {
-	
+
 	/* Program Name: Thinking inside the box
 	 * Version: 1.0
 	 * 
@@ -17,7 +17,7 @@ public class Program507A {
 	 * 
 	 * Description: Think in a box
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -26,13 +26,13 @@ public class Program507A {
 		//store string
 		String s = in.nextLine();
 		//output full line of stars
-		for (int i = 0; i < s.length() + 4; i++){
+		for (int i = 0; i < s.length() + 4; i++) {
 			System.out.print("*");
 		}
 		System.out.println();
 		//output spacer
 		System.out.print("*");
-		for (int i = 0; i < s.length() + 2; i++){
+		for (int i = 0; i < s.length() + 2; i++) {
 			System.out.print(" ");
 		}
 		System.out.println("*");
@@ -40,19 +40,17 @@ public class Program507A {
 		System.out.println("* " + s + " *");
 		//output spacer
 		System.out.print("*");
-		for (int i = 0; i < s.length() + 2; i++){
+		for (int i = 0; i < s.length() + 2; i++) {
 			System.out.print(" ");
 		}
 		System.out.println("*");
 		//output full line of stars
-		for (int i = 0; i < s.length() + 4; i++){
+		for (int i = 0; i < s.length() + 4; i++) {
 			System.out.print("*");
 		}
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

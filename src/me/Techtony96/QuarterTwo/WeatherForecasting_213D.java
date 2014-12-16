@@ -7,7 +7,7 @@ import me.Techtony96.Utilities.Order;
 import me.Techtony96.Utilities.Round;
 
 public class WeatherForecasting_213D {
-	
+
 	/* Program Name: Weather Forecasting
 	 * Version: 1.0
 	 * 
@@ -17,7 +17,7 @@ public class WeatherForecasting_213D {
 	 * 
 	 * Description: get the temperature based on the crickets
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -26,40 +26,39 @@ public class WeatherForecasting_213D {
 		//assign input to variable
 		double chirps = in.nextDouble();
 		//calculate farenheit and celcius
-		double F = (chirps+40)/4.0;
-		double C = ((F - 32)*5.0)/9.0;
+		double F = (chirps + 40) / 4.0;
+		double C = ((F - 32) * 5.0) / 9.0;
 		//define variable for the condition of the weather
 		String condition;
 		//determine what the condition is
-		if (F < 45){
+		if (F < 45) {
 			condition = "Bur-rrr";
-		} else if (Order.isBetween(F, 45, 64)){
+		} else if (Order.isBetween(F, 45, 64)) {
 			condition = "Take a jacket";
-		} else if (Order.isBetween(F, 65, 80)){
+		} else if (Order.isBetween(F, 65, 80)) {
 			condition = "Ah-hh";
-		} else if (Order.isBetween(F, 81, 108)){
+		} else if (Order.isBetween(F, 81, 108)) {
 			condition = "Whew";
 		} else {
 			condition = "Dead Cricket";
 		}
-		
+
 		//output result
 		l("Fahrenheit = " + Round.tenths(F));
 		l("Centigrade = " + Round.tenths(C));
 		l("Condition = " + condition);
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
+
 	//methods to make outputting stuff easier
-	private static void l(String s){
+	private static void l(String s) {
 		System.out.println(s);
 	}
-	private static void p(String s){
+
+	private static void p(String s) {
 		System.out.print(s);
 	}
-
 
 }
 /*

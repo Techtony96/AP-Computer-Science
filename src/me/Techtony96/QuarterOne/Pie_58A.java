@@ -18,7 +18,6 @@ public class Pie_58A {
 	 * Description: Find things about a circle and sphere
 	 */
 
-
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Input raidus");
@@ -30,15 +29,12 @@ public class Pie_58A {
 		System.out.println("Circumference of " + Round.thousandths(pie.getCircumference()));
 		System.out.println("");
 		System.out.println("A sphere with a radius of " + Round.thousandths(r) + " has:");
-		System.out.println("Volume of " + Round.thousandths((4.0/3.0)*Math.PI*Math.pow(r, 3.0)));
-		System.out.println("Surface Area of " + Round.thousandths(4.0*Math.PI*Math.pow(r, 2.0)));
+		System.out.println("Volume of " + Round.thousandths((4.0 / 3.0) * Math.PI * Math.pow(r, 3.0)));
+		System.out.println("Surface Area of " + Round.thousandths(4.0 * Math.PI * Math.pow(r, 2.0)));
 
-
-		BlockLetters.TONY_PAPPAS.outputBlockName();		
+		BlockLetters.TONY_PAPPAS.outputBlockName();
 
 	}
-
-
 
 }
 /*

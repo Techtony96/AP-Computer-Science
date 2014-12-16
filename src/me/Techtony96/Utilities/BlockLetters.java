@@ -5,44 +5,34 @@ import java.util.List;
 
 public enum BlockLetters {
 	TONY_PAPPAS(TonyPappas(), "Tony Pappas");
-	
+
 	private List<String> currentList = new ArrayList<String>();
 	private String name = "";
-	
-	
-	BlockLetters(List<String> list, String name){
+
+	BlockLetters(List<String> list, String name) {
 		this.currentList = list;
 		this.name = name;
 	}
-	
-	
-	public List<String> getList(){
+
+	public List<String> getList() {
 		return currentList;
 	}
-	
-	public String getStringName(){
+
+	public String getStringName() {
 		return name;
 	}
-	
-	public void outputStringName(){
+
+	public void outputStringName() {
 		System.out.println(name);
 	}
-	
-	public void outputBlockName(){
-		for (String s : currentList){
+
+	public void outputBlockName() {
+		for (String s : currentList) {
 			System.out.println(s);
 		}
 
 	}
-	
-	
-	
-	
 
-	
-	
-	
-	
 	private static List<String> TonyPappas() {
 		List<String> TonyPappas = new ArrayList<String>();
 		TonyPappas.add(" ");

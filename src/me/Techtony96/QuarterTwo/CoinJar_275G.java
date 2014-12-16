@@ -3,7 +3,7 @@ package me.Techtony96.QuarterTwo;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class CoinJar_275G {
-	
+
 	/* Program Name: Coin Jar
 	 * Version: 1.0
 	 * 
@@ -13,29 +13,25 @@ public class CoinJar_275G {
 	 * 
 	 * Description: Find the possible ways $1.05 can add up
 	 */
-	
 
 	public static void main(String[] args) {
 		//Define loops to loop through each possible way the coins can add up
-		for (int quarters = 0; quarters <= 5; quarters++){
-			for (int dimes = 0; dimes <= 12; dimes ++){
-				for (int nickles = 0; nickles <= 25; nickles ++){
-					for (int pennies = 0; pennies <= 106; pennies++){
+		for (int quarters = 0; quarters <= 5; quarters++) {
+			for (int dimes = 0; dimes <= 12; dimes++) {
+				for (int nickles = 0; nickles <= 25; nickles++) {
+					for (int pennies = 0; pennies <= 106; pennies++) {
 						//check if the money adds up to $1.05 and if the count of coins = 14
-						if (quarters*25+dimes*10+nickles*5+pennies == 105 && quarters+dimes+nickles+pennies == 14){
+						if (quarters * 25 + dimes * 10 + nickles * 5 + pennies == 105 && quarters + dimes + nickles + pennies == 14) {
 							//if true, output result
-							System.out.println(quarters + " quarters "+dimes+" dimes "+nickles+" nickles "+pennies+" pennies");
+							System.out.println(quarters + " quarters " + dimes + " dimes " + nickles + " nickles " + pennies + " pennies");
 						}
 					}
 				}
 			}
 		}
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

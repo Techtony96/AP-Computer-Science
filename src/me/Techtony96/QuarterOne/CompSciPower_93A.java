@@ -7,7 +7,7 @@ import me.Techtony96.Utilities.BlockLetters;
 import me.Techtony96.Utilities.Round;
 
 public class CompSciPower_93A {
-	
+
 	/* Program Name: Computer Science Power and Light
 	 * Version: 1.0
 	 * 
@@ -17,7 +17,7 @@ public class CompSciPower_93A {
 	 * 
 	 * Description: Calculate a receipt
 	 */
-	
+
 	static double cost = 0.0475;
 	static double surcharge = 0.1;
 	static double citytax = 0.03;
@@ -25,7 +25,7 @@ public class CompSciPower_93A {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		
+
 		System.out.println("Enter KWH used:");
 		int hours = in.nextInt();
 		System.out.println("");
@@ -33,9 +33,9 @@ public class CompSciPower_93A {
 		System.out.println("------------------------------------------------");
 		System.out.println("Kilowatts Used       " + hours + " @ $" + cost);
 		System.out.println("------------------------------------------------");
-		double basechargePrice = hours*cost;
-		double surchargePrice = hours*cost*surcharge;
-		double citytaxPrice = hours*cost*citytax;
+		double basechargePrice = hours * cost;
+		double surchargePrice = hours * cost * surcharge;
+		double citytaxPrice = hours * cost * citytax;
 		System.out.println("Base Charge           $" + Round.hundredths(basechargePrice));
 		System.out.println("Surcharge             $" + Round.hundredths(surchargePrice));
 		System.out.println("City Tax              $" + Round.hundredths(citytaxPrice));
@@ -44,12 +44,10 @@ public class CompSciPower_93A {
 		System.out.println("");
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, 7);
-		System.out.println("After " + cal.getTime() + " pay $" + Round.hundredths((basechargePrice + surchargePrice + citytaxPrice)*1.04));
-		BlockLetters.TONY_PAPPAS.outputBlockName();		
-		
+		System.out.println("After " + cal.getTime() + " pay $" + Round.hundredths((basechargePrice + surchargePrice + citytaxPrice) * 1.04));
+		BlockLetters.TONY_PAPPAS.outputBlockName();
+
 	}
-	
-	
 
 }
 /*

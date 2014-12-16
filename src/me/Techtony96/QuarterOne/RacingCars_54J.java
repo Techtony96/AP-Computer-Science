@@ -7,7 +7,7 @@ import me.Techtony96.Utilities.Circle;
 import me.Techtony96.Utilities.Round;
 
 public class RacingCars_54J {
-	
+
 	/* Program Name: Racing Cars
 	 * Version: 1.0
 	 * 
@@ -17,28 +17,24 @@ public class RacingCars_54J {
 	 * 
 	 * Description: Find the time between two cars racing around the world.
 	 */
-	
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		double diameter_red = 8000;
 		double diameter_blue = 8000.00284091;
-		
+
 		Circle red = new Circle(diameter_red);
 		Circle blue = new Circle(diameter_blue);
-		double seconds_red = (red.getCircumference()/70.0)*60.0*60.0;
-		double seconds_blue = (blue.getCircumference()/70.0)*60.0*60.0;
-		
+		double seconds_red = (red.getCircumference() / 70.0) * 60.0 * 60.0;
+		double seconds_blue = (blue.getCircumference() / 70.0) * 60.0 * 60.0;
+
 		double result = seconds_blue - seconds_red;
-		
+
 		System.out.println("The Blue Car will cross the finish line " + Round.thousandths(result) + " seconds after the red car.");
-		
-		
-		BlockLetters.TONY_PAPPAS.outputBlockName();		
-		
+
+		BlockLetters.TONY_PAPPAS.outputBlockName();
+
 	}
-	
-	
 
 }
 /*

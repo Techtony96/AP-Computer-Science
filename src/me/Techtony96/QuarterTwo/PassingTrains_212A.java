@@ -18,7 +18,7 @@ public class PassingTrains_212A {
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
+
 		//define basic variables
 		double freightTrainSpeed_mph = 40;
 		double freightTrainTime = 9;
@@ -27,13 +27,13 @@ public class PassingTrains_212A {
 		double freightTrainDistance;
 		double passengerTrainDistance;
 		//loop program 3 times
-		for (int i = 1; i <= 3; i++){
+		for (int i = 1; i <= 3; i++) {
 			//ask for speed of passenger train
 			System.out.println("Enter the speed of the passenger train");
 			passengerTrainSpeed_mph = in.nextDouble();
-			
+
 			//calculate distance of freight train when passenger train started
-			freightTrainDistance = (passengerTrainTime-freightTrainTime) * freightTrainSpeed_mph;
+			freightTrainDistance = (passengerTrainTime - freightTrainTime) * freightTrainSpeed_mph;
 			passengerTrainDistance = 0;
 			int hoursPassed = 0;
 
@@ -47,9 +47,8 @@ public class PassingTrains_212A {
 			//output results
 			System.out.println("The passenger train will catch the freight train at time " + ((int) passengerTrainTime + hoursPassed) + ":00");
 
-			System.out.println("The freight train was traveling "+freightTrainSpeed_mph+" mph");
-			System.out.println("The passenger train was traveling "+passengerTrainSpeed_mph+" mph");
-
+			System.out.println("The freight train was traveling " + freightTrainSpeed_mph + " mph");
+			System.out.println("The passenger train was traveling " + passengerTrainSpeed_mph + " mph");
 
 			BlockLetters.TONY_PAPPAS.outputBlockName();
 		}

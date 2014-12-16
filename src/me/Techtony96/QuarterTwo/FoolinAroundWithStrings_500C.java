@@ -6,7 +6,7 @@ import java.util.Scanner;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class FoolinAroundWithStrings_500C {
-	
+
 	/* Program Name: Foolin Around With Strings
 	 * Version: 1.0
 	 * 
@@ -16,7 +16,7 @@ public class FoolinAroundWithStrings_500C {
 	 * 
 	 * Description: String madness!
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -27,18 +27,15 @@ public class FoolinAroundWithStrings_500C {
 		//output the length of the word
 		System.out.println("The length of your word is " + word.length() + " characters.");
 		//say it so many times
-		for (int i = 1; i <= word.length(); i++){
+		for (int i = 1; i <= word.length(); i++) {
 			System.out.println(word);
 		}
-		
+
 		//say i printed it X times
 		System.out.println("So I printed it " + word.length() + " times.");
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

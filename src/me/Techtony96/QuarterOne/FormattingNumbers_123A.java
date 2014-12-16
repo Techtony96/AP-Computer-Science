@@ -3,7 +3,7 @@ package me.Techtony96.QuarterOne;
 import me.Techtony96.Utilities.BlockLetters;
 
 public class FormattingNumbers_123A {
-	
+
 	/* Program Name: Formatting Numbers
 	 * Version: 1.0
 	 * 
@@ -13,13 +13,12 @@ public class FormattingNumbers_123A {
 	 * 
 	 * Description: Format numbers in a correct output
 	 */
-	
 
 	public static void main(String[] args) {
 		//Define New stringBuilder
 		StringBuilder sb = new StringBuilder();
 		//Loop from 1 to 25
-		for (int i = 1; i <= 25; i++){
+		for (int i = 1; i <= 25; i++) {
 			//Find the length of the current int
 			int currentLength = String.valueOf(i).length();
 			//Find the space needed to make the numbers in neat columns
@@ -27,22 +26,18 @@ public class FormattingNumbers_123A {
 			//Add the number to the current working string
 			sb.append(i);
 			//Add the correct number of spaces
-			for (int a = 1; a<=space; a++){
+			for (int a = 1; a <= space; a++) {
 				sb.append(" ");
 			}
 			//If I have done 5 numbers output the line and clear the current working string.
-			if (i % 5 == 0){
+			if (i % 5 == 0) {
 				System.out.println(sb.toString());
 				sb.delete(0, sb.length());
 			}
 		}
-		
-		
-		
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*

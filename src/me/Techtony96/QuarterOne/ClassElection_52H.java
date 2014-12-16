@@ -8,11 +8,11 @@ public class ClassElection_52H {
 	 */
 
 	public static void main(String[] args) {
-		
+
 		//Define initial variables
 		int totalVotes = 9485;
 		int Mary = 0, Peter = 0, Paul = 0, Joan = 0;
-		
+
 		//Calcualte number of votes for each person
 		Mary = (totalVotes + 86 + 23 + 74) / 4;
 		Joan = Mary - 86;
@@ -24,8 +24,6 @@ public class ClassElection_52H {
 		System.out.println("Peter has 74 less than Mary giving him " + Peter + " votes.");
 		System.out.println("Paul has 23 less than Mary giving him " + Paul + " votes.");
 		System.out.println("Joan has 86 less than Mary giving her " + Joan + " votes");
-
-
 
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 

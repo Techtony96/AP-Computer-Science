@@ -8,7 +8,7 @@ import me.Techtony96.Utilities.BlockLetters;
 import me.Techtony96.Utilities.Round;
 
 public class Program512H {
-	
+
 	/* Program Name: Three Letter Words
 	 * Version: 1.0
 	 * 
@@ -18,7 +18,7 @@ public class Program512H {
 	 * 
 	 * Description: Find 3 letter words
 	 */
-	
+
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) throws FileNotFoundException {
@@ -27,9 +27,9 @@ public class Program512H {
 		//define file
 		Scanner inFile = new Scanner(new File(System.getProperty("user.dir") + "/src/Files/prog512h.dat"));
 		//loop through file
-		while (inFile.hasNext()){
+		while (inFile.hasNext()) {
 			//if word is 3 letters
-			if (inFile.next().length() == 3){
+			if (inFile.next().length() == 3) {
 				threeWordCount++;
 			}
 			totalCount++;
@@ -37,12 +37,10 @@ public class Program512H {
 		//output results
 		System.out.println("Total Words = " + totalCount);
 		System.out.println("Three Letter Words = " + threeWordCount);
-		System.out.println("Percentage of Occurrence: " + Round.hundredths(threeWordCount/totalCount)*100.0 + "%");
-		
+		System.out.println("Percentage of Occurrence: " + Round.hundredths(threeWordCount / totalCount) * 100.0 + "%");
+
 		BlockLetters.TONY_PAPPAS.outputBlockName();
 	}
-	
-	
 
 }
 /*
