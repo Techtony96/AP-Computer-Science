@@ -26,6 +26,7 @@ public class MagpieRunner2 {
 				statement = in.nextLine();
 			} else {
 				System.out.println("Say something please.");
+				statement = in.nextLine();
 			}
 		}
 	}

@@ -34,17 +34,17 @@ public class Magpie2 {
 	public String getResponse(String statement) {
 		String response = "";
 		statement = statement.toLowerCase();
-		if (statement.indexOf("no") >= 0) {
+		if (findKeyword(statement, "no") >= 0) {
 			response = "Why so negative?";
-		} else if (statement.indexOf("mother") >= 0 || statement.indexOf("father") >= 0 || statement.indexOf("sister") >= 0 || statement.indexOf("brother") >= 0) {
+		} else if (findKeyword(statement, "mother") >= 0 || findKeyword(statement, "father") >= 0 || findKeyword(statement, "sister") >= 0 || findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
-		} else if (statement.indexOf("dog") >= 0 || statement.indexOf("cat") >= 0) {
+		} else if (findKeyword(statement, "dog") >= 0 || findKeyword(statement, "cat") >= 0) {
 			response = "Tell me more about your pets.";
-		} else if (statement.indexOf("mr. ") >= 0 || statement.indexOf("ms. ") >= 0) {
+		} else if (findKeyword(statement, "mr. ") >= 0 || findKeyword(statement, "ms. ") >= 0) {
 			response = "He sounds like a good teacher.";
-		} else if (statement.indexOf("summer") >= 0 || statement.indexOf("sun") >= 0) {
+		} else if (findKeyword(statement, "summer") >= 0 || findKeyword(statement, "sun") >= 0) {
 			response = "I like summer time too!";
-		} else if (statement.indexOf("christmas") >= 0 || statement.indexOf("snow") >= 0) {
+		} else if (findKeyword(statement, "christmas") >= 0 || findKeyword(statement, "snow") >= 0) {
 			response = "Winter is too cold for me!";
 		} else {
 			response = getRandomResponse();
@@ -84,5 +84,28 @@ public class Magpie2 {
 		}
 
 		return response;
+	}
+
+	private int findKeyword(String statement, String goal) {
+		String phrase = statement.trim();
+		//The only change to incorporate the startPso is in the line below
+		int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), 0);
+		//Refinement – make sure the goal is not part of a word
+		while (psn >= 0) {
+			//Find the string of length 1 before and after the word
+			String before = " ", after = " ";
+			if (psn > 0) {
+				before = phrase.substring(psn - 1, psn).toLowerCase();
+			}
+			if (psn + goal.length() < phrase.length()) {
+				after = phrase.substring(psn + goal.length(), psn + goal.length() + 1).toLowerCase();
+			}// If before and after are not letters, we have found the word
+			if (((before.compareTo("a") < 0) || (before.compareTo("z") > 0)) && ((after.compareTo("a") < 0) || (after.compareTo("z") > 0))) {
+				return psn;
+			}
+			// The last position did not work so let’s find the next one if there is one.
+			psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
+		}
+		return -1;
 	}
 }
