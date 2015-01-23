@@ -1,4 +1,4 @@
-package me.Techtony96.QuarterThree.Week20.Thursday;
+package me.Techtony96.QuarterThree.Week20.OOD;
 
 import java.util.Scanner;
 
