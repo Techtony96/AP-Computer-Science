@@ -2,6 +2,7 @@ package me.Techtony96.QuarterOne;
 
 import java.util.Scanner;
 
+import me.Techtony96.QuarterThree.Week22.Mathey;
 import me.Techtony96.Utilities.BlockLetters;
 import me.Techtony96.Utilities.Round;
 
@@ -31,7 +32,7 @@ public class Circles_54C {
 		System.out.println("Insert Circle Radius:");
 		Radius = in.nextDouble();
 		circumference = 2 * pi * Radius;
-		area = pi * Radius * Radius;
+		area = Mathey.AreaOfACircle(Radius);
 
 		//Round numbers
 		area = Round.hundredths(area);
