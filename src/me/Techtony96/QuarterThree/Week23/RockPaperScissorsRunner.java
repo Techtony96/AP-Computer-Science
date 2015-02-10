@@ -7,10 +7,13 @@ public class RockPaperScissorsRunner {
 	private static Scanner in = new Scanner(System.in);
 	
 	public static void main(String args[]){
+		//Welcome message
 		System.out.println("Welcome to Rock Paper Scissors!");
 		System.out.print("Please enter your name: ");
+		//define player and game objects
 		Player p = new Player(in.nextLine());
 		Game rps = new Game();
+		//continue forever until player wants to stop
 		while (true){
 			if (rps.continueGame() == false){
 				break;
@@ -21,12 +24,16 @@ public class RockPaperScissorsRunner {
 		//Extra Credit - Start a new game?
 		p = null;
 		rps = null;
+		//ask user to play again
 		System.out.print("Play again? (true/false): ");
+		//start a new game
 		if (in.nextBoolean()){
 			System.out.println("Starting new game...\n");
 			in.nextLine();
+			//call main method to restart entire program
 			main(null);
 		} else {
+			//quit program
 			System.out.println("Good bye!");
 			System.exit(0);
 		}

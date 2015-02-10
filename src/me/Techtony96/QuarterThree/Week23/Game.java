@@ -4,31 +4,41 @@ import me.Techtony96.Utilities.RandomUtil;
 
 public class Game {
 	
+	//define private variables
 	private int compThrow, playerWins, compWins;
 	private boolean Continue = true;
 	
+	//generate a random play
 	public void makeComputerThrow(){
 		compThrow = RandomUtil.randInt(1, 3);
 	}
 	
+	//get the computers throw
 	public int getCompThrow(){
-		if (compThrow > 3 || compThrow < 1){
+		//if the throw is not valid, try again
+		while (compThrow > 3 || compThrow < 1){
 			makeComputerThrow();
 		}
 		return compThrow;
 	}
 	
+	//announce the winner of the current hand
 	public void announceWinner(Player p){
+		//make a new throw for the computer
 		makeComputerThrow();
+		//if player wants to stop the game
 		if (p.getThrow() == -1){
+			//set continue to false
 			continueGame(false);
 			bigWinner(p);
 			return;
 		}
+		//if the input is not valid
 		while (p.getThrow() > 3 || p.getThrow() < 1){
 			System.out.println("Invalid Input!");
 			p.makeThrow();
 		}
+		//if the game should still continue, announce results
 		if (continueGame()){
 			System.out.println(p.getPlayerName() + " threw " + getType(p.getThrow()) + " and the computer threw " + getType(getCompThrow()) + ".");
 			if (p.getThrow() == getCompThrow()){
@@ -43,6 +53,7 @@ public class Game {
 		}	
 	}
 	
+	//output overall winner
 	public void bigWinner(Player p){
 		if (playerWins > compWins){
 			System.out.println(p.getPlayerName() + " beat the computer " + playerWins + " to " + compWins + ".");
@@ -53,6 +64,7 @@ public class Game {
 		}
 	}
 	
+	//determine if the player won
 	public boolean playerWinner(int p, int comp){
 		if (p == 1 && comp == 3){
 			return true;
@@ -66,6 +78,7 @@ public class Game {
 		return false;
 	}
 	
+	//get the name of the throw
 	public String getType(int _throw){
 		switch(_throw){
 			case 1:
@@ -79,10 +92,12 @@ public class Game {
 		return null;
 	}
 	
+	//Check if the game should continue
 	public boolean continueGame(){
 		return Continue;
 	}
 	
+	//set the game to continue
 	public void continueGame(boolean t){
 		Continue = t;
 	}
