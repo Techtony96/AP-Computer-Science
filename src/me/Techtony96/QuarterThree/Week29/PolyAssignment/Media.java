@@ -4,19 +4,39 @@ import java.util.Calendar;
 
 public abstract class Media {
 
-	private String title;
-	private Calendar checkOut;
+	protected String title;
+	protected Calendar checkOutDate;
 
 	public Media() {
 		title = null;
-		checkOut = Calendar.getInstance();
+		checkOutDate = Calendar.getInstance();
 	}
 
 	public Media(String t, Calendar c) {
 		title = t;
-		checkOut = c;
+		checkOutDate = c;
+	}
+	
+	public String getTitle(){
+		return title;
+	}
+	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	public Calendar getCheckOutDate(){
+		return checkOutDate;
+	}
+	
+	public void setCheckOutDate(Calendar checkOutDate){
+		this.checkOutDate = checkOutDate;
 	}
 
+	/**
+	 * Get the due date of the media checked out
+	 * @return Calendar due date
+	 */
 	public abstract Calendar getReturnDate();
 
 }
