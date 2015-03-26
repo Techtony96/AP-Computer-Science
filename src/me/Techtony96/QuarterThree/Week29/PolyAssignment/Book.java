@@ -34,8 +34,8 @@ public class Book extends Media {
 		String str = "The sections of the Book are";
 		str += "\n\t Title: " + getTitle();
 		str += "\n\t Author: " + getAuthor();
-		str += "\n\t Checkout Date: " + getCheckOutDate();
-		str += "\n\t Due Date: " + getReturnDate();
+		str += "\n\t Checkout Date: " + (getCheckOutDate().get(Calendar.MONTH) + 1) + "/" + getCheckOutDate().get(Calendar.DAY_OF_MONTH);
+		str += "\n\t Due Date: " + (getReturnDate().get(Calendar.MONTH) + 1) + "/" + getReturnDate().get(Calendar.DAY_OF_MONTH);
 		return str;
 	}
 
@@ -45,7 +45,7 @@ public class Book extends Media {
 	@Override
 	public Calendar getReturnDate() {
 		Calendar dueDate = Calendar.getInstance();
-		dueDate.setTime(checkOutDate.getTime());
+		dueDate.setTimeInMillis(getCheckOutDate().getTimeInMillis());
 		dueDate.add(Calendar.DAY_OF_YEAR, 21);
 		return dueDate;
 	}

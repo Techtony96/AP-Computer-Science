@@ -29,7 +29,7 @@ public class Movie extends Media {
 	@Override
 	public Calendar getReturnDate() {
 		Calendar dueDate = Calendar.getInstance();
-		dueDate.setTime(checkOutDate.getTime());
+		dueDate.setTimeInMillis(getCheckOutDate().getTimeInMillis());
 		dueDate.add(Calendar.DAY_OF_YEAR, 7);
 		return dueDate;
 	}
@@ -37,8 +37,9 @@ public class Movie extends Media {
 	public String toString() {
 		String str = "The sections of the Movie are";
 		str += "\n\t Title: " + getTitle();
-		str += "\n\t Checkout Date: " + getCheckOutDate();
-		str += "\n\t Due Date: " + getReturnDate();
+		str += "\n\t Year: " + getYear();
+		str += "\n\t Checkout Date: " + (getCheckOutDate().get(Calendar.MONTH) + 1) + "/" + getCheckOutDate().get(Calendar.DAY_OF_MONTH);
+		str += "\n\t Due Date: " + (getReturnDate().get(Calendar.MONTH) + 1) + "/" + getReturnDate().get(Calendar.DAY_OF_MONTH);
 		return str;
 	}
 
