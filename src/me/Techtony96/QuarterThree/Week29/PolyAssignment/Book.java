@@ -25,7 +25,7 @@ public class Book extends Media {
 	}
 
 	//Set the Book's Last name
-	public void setauthor(String author) {
+	public void setAuthor(String author) {
 		this.author = author;
 	}
 
