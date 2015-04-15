@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.IntStream;
+//import java.util.stream.IntStream;
 
 public class Program470C {
 	
@@ -38,7 +38,7 @@ public class Program470C {
 		System.out.println("With Totals:");
 		
 		for (int[] row : array) {
-			System.out.println(Arrays.toString(row).replace("[", "").replace("]", "").replace(",", "\t") + "\t" +  IntStream.of(row).sum());
+//			System.out.println(Arrays.toString(row).replace("[", "").replace("]", "").replace(",", "\t") + "\t" +  IntStream.of(row).sum());
 		}
 		for (int k = 0; k < array.length; k++){
 			int total = 0;
