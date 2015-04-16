@@ -1,5 +1,5 @@
 package me.Techtony96.QuarterThree.Week32;
-import java.util.Collections;
+import java.util.Collection;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ public class Deck {
 	/**
 	 * cards contains all the cards in the deck.
 	 */
-	private List<Card> cards = new ArrayList<>();
+	private List<Card> cards;
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -32,9 +32,10 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		for(int i = 0; i < ranks.length; i++) {
-			for(String s : suits) {
-				cards.add(new Card(ranks[i], s, values[i]));
+		cards = new ArrayList<Card>();
+		for (int j = 0; j < ranks.length; j++) {
+			for (String suitString : suits) {
+				cards.add(new Card(ranks[j], suitString, values[j]));
 			}
 		}
 		size = cards.size();
@@ -63,7 +64,24 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		Collections.shuffle(cards);
+		size = cards.size();
+		ArrayList<Card> shuffle = new ArrayList<>();
+		for (int i = 0; i <= 52; i++)
+			shuffle.add(null);
+		int k = 0;
+		
+		for (int j = 0; j < (cards.size() + 1) / 2; j++) {
+			shuffle.set(k, cards.get(j));
+			k += 2;
+		}
+		k = 1;
+		for (int j = (cards.size() + 1) / 2; j < cards.size(); j++) {
+			shuffle.set(k, cards.get(j));
+			k += 2;
+		}
+		this.cards.clear();
+		this.cards.addAll(shuffle);
+
 	}
 
 	/**
@@ -72,9 +90,12 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
+		if (isEmpty()) {
+			return null;
+		}
 		size--;
-		return cards.get(size + 1);
-		
+		Card c = cards.get(size);
+		return c;
 	}
 
 	/**
