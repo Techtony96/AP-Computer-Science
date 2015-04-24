@@ -1,22 +1,18 @@
 package me.Techtony96.QuarterThree.Week32;
-
-import java.util.List;
-import java.util.ArrayList;
-
 import java.util.List;
 import java.util.ArrayList;
 
 /**
- * This class represents a Board that can be used in a collection of solitaire
- * games similar to Elevens. The variants differ in card removal and the board
- * size.
+ * This class represents a Board that can be used in a collection
+ * of solitaire games similar to Elevens.  The variants differ in
+ * card removal and the board size.
  */
 public abstract class Board {
 
 	/**
 	 * The cards on this board.
 	 */
-	public Card[] cards;
+	private Card[] cards;
 
 	/**
 	 * The deck of cards being used to play the current game.
@@ -30,15 +26,11 @@ public abstract class Board {
 
 	/**
 	 * Creates a new <code>Board</code> instance.
-	 * 
-	 * @param size
-	 *            the number of cards in the board
-	 * @param ranks
-	 *            the names of the card ranks needed to create the deck
-	 * @param suits
-	 *            the names of the card suits needed to create the deck
-	 * @param pointValues
-	 *            the integer values of the cards needed to create the deck
+	 * @param size the number of cards in the board
+	 * @param ranks the names of the card ranks needed to create the deck
+	 * @param suits the names of the card suits needed to create the deck
+	 * @param pointValues the integer values of the cards needed to create
+	 *                    the deck
 	 */
 	public Board(int size, String[] ranks, String[] suits, int[] pointValues) {
 		cards = new Card[size];
@@ -51,8 +43,8 @@ public abstract class Board {
 	}
 
 	/**
-	 * Start a new game by shuffling the deck and dealing some cards to this
-	 * board.
+	 * Start a new game by shuffling the deck and
+	 * dealing some cards to this board.
 	 */
 	public void newGame() {
 		deck.shuffle();
@@ -60,9 +52,9 @@ public abstract class Board {
 	}
 
 	/**
-	 * Accesses the size of the board. Note that this is not the number of cards
-	 * it contains, which will be smaller near the end of a winning game.
-	 * 
+	 * Accesses the size of the board.
+	 * Note that this is not the number of cards it contains,
+	 * which will be smaller near the end of a winning game.
 	 * @return the size of the board
 	 */
 	public int size() {
@@ -71,7 +63,6 @@ public abstract class Board {
 
 	/**
 	 * Determines if the board is empty (has no cards).
-	 * 
 	 * @return true if this board is empty; false otherwise.
 	 */
 	public boolean isEmpty() {
@@ -84,11 +75,9 @@ public abstract class Board {
 	}
 
 	/**
-	 * Deal a card to the kth position in this board. If the deck is empty, the
-	 * kth card is set to null.
-	 * 
-	 * @param k
-	 *            the index of the card to be dealt.
+	 * Deal a card to the kth position in this board.
+	 * If the deck is empty, the kth card is set to null.
+	 * @param k the index of the card to be dealt.
 	 */
 	public void deal(int k) {
 		cards[k] = deck.deal();
@@ -96,7 +85,6 @@ public abstract class Board {
 
 	/**
 	 * Accesses the deck's size.
-	 * 
 	 * @return the number of undealt cards left in the deck.
 	 */
 	public int deckSize() {
@@ -105,10 +93,8 @@ public abstract class Board {
 
 	/**
 	 * Accesses a card on the board.
-	 * 
 	 * @return the card at position k on the board.
-	 * @param k
-	 *            is the board position of the card to return.
+	 * @param k is the board position of the card to return.
 	 */
 	public Card cardAt(int k) {
 		return cards[k];
@@ -116,9 +102,8 @@ public abstract class Board {
 
 	/**
 	 * Replaces selected cards on the board by dealing new cards.
-	 * 
-	 * @param selectedCards
-	 *            is a list of the indices of the cards to be replaced.
+	 * @param selectedCards is a list of the indices of the
+	 *        cards to be replaced.
 	 */
 	public void replaceSelectedCards(List<Integer> selectedCards) {
 		for (Integer k : selectedCards) {
@@ -129,8 +114,8 @@ public abstract class Board {
 	/**
 	 * Gets the indexes of the actual (non-null) cards on the board.
 	 *
-	 * @return a List that contains the locations (indexes) of the non-null
-	 *         entries on the board.
+	 * @return a List that contains the locations (indexes)
+	 *         of the non-null entries on the board.
 	 */
 	public List<Integer> cardIndexes() {
 		List<Integer> selected = new ArrayList<Integer>();
@@ -144,7 +129,6 @@ public abstract class Board {
 
 	/**
 	 * Generates and returns a string representation of this board.
-	 * 
 	 * @return the string version of this board.
 	 */
 	public String toString() {
@@ -156,10 +140,10 @@ public abstract class Board {
 	}
 
 	/**
-	 * Determine whether or not the game has been won, i.e. neither the board
-	 * nor the deck has any more cards.
-	 * 
-	 * @return true when the current game has been won; false otherwise.
+	 * Determine whether or not the game has been won,
+	 * i.e. neither the board nor the deck has any more cards.
+	 * @return true when the current game has been won;
+	 *         false otherwise.
 	 */
 	public boolean gameIsWon() {
 		if (deck.isEmpty()) {
@@ -174,21 +158,19 @@ public abstract class Board {
 	}
 
 	/**
-	 * Method to be completed by the concrete class that determines if the
-	 * selected cards form a valid group for removal.
-	 * 
-	 * @param selectedCards
-	 *            the list of the indices of the selected cards.
-	 * @return true if the selected cards form a valid group for removal; false
-	 *         otherwise.
+	 * Method to be completed by the concrete class that determines
+	 * if the selected cards form a valid group for removal.
+	 * @param selectedCards the list of the indices of the selected cards.
+	 * @return true if the selected cards form a valid group for removal;
+	 *         false otherwise.
 	 */
-	public abstract boolean isLegal(List<Integer> selectedCards);
+	public abstract ArrayList<Integer> isLegal(List<Integer> selectedCards);
 
 	/**
-	 * Method to be completed by the concrete class that determines if there are
-	 * any legal plays left on the board.
-	 * 
-	 * @return true if there is a legal play left on the board; false otherwise.
+	 * Method to be completed by the concrete class that determines
+	 * if there are any legal plays left on the board.
+	 * @return true if there is a legal play left on the board;
+	 *         false otherwise.
 	 */
 	public abstract boolean anotherPlayIsPossible();
 

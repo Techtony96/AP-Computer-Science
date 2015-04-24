@@ -15,14 +15,3 @@ public class ElevensGUIRunner {
 		gui.displayGame();
 	}
 }
-
-/*
-
-1. Because the size method does the same thing, returns the variable BOARD_SIZE.
-
-2. It is done the same way no matter what the game is
-
-3. Yes and no, because in interfaces you can not have methods, so in this case it wont work but in other instances it might.
-
-
-*/
