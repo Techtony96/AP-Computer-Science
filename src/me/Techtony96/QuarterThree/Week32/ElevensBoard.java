@@ -67,8 +67,8 @@ public class ElevensBoard extends Board {
 	 */
 	@Override
 	public boolean anotherPlayIsPossible() {
-		for (Card c : super.getCards()) {
-			for (Card s : getCards()) {
+		for (Card c : super.cards) {
+			for (Card s : super.cards) {
 				if (c == s)
 					continue;
 				if (c.pointValue() + s.pointValue() == 11)
@@ -76,7 +76,7 @@ public class ElevensBoard extends Board {
 			}
 		}
 		boolean j = false, q = false, k = false;
-		for (Card c : getCards()) {
+		for (Card c : super.cards) {
 			if (c.rank() == "jack")
 				j = true;
 			if (c.rank() == "queen")
@@ -99,7 +99,7 @@ public class ElevensBoard extends Board {
 	 *         false otherwise.
 	 */
 	private boolean containsPairSum11(List<Integer> selectedCards) {
-		if (super.getCards()[selectedCards.get(0)].pointValue() + super.getCards()[selectedCards.get(1)].pointValue() == 11)
+		if (super.cards[selectedCards.get(0)].pointValue() + super.cards[selectedCards.get(1)].pointValue() == 11)
 			return true;
 		return false;
 	}
@@ -116,11 +116,11 @@ public class ElevensBoard extends Board {
 	private boolean containsJQK(List<Integer> selectedCards) {
 		boolean j = false, q = false, k = false;
 		for (int i : selectedCards) {
-			if (super.getCards()[i].rank() == "jack" && j == false)
+			if (super.cards[i].rank() == "jack" && j == false)
 				j = true;
-			if (super.getCards()[i].rank() == "queen" && q == false)
+			if (super.cards[i].rank() == "queen" && q == false)
 				q = true;
-			if (super.getCards()[i].rank() == "king" && k == false)
+			if (super.cards[i].rank() == "king" && k == false)
 				k = true;
 		}
 		if (j && q && k)
